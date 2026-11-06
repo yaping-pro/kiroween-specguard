@@ -8,6 +8,8 @@
 > Built for the **AWS Kiroween 2026 Hackathon** (Skeleton Crew Category).  
 > A reusable mathematical invariant state engine paired with continuous Property-Based Testing (PBT) to eliminate vibe-coding drift across AI-generated codebases.
 
+**🔴 Live dashboard:** https://yaping-pro.github.io/kiroween-specguard/
+
 ---
 
 ## 🌟 The Core Idea: Beyond Vibe Coding
@@ -66,7 +68,7 @@ bun test
 # Launch the live interactive dashboard
 bun run serve
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the live dashboard and trigger real-time PBT stress passes!
+Open [http://localhost:3000/public/index.html](http://localhost:3000/public/index.html) locally, or use the deployed dashboard: https://yaping-pro.github.io/kiroween-specguard/
 
 ---
 
