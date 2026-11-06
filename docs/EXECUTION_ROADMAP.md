@@ -96,6 +96,13 @@
 
 ---
 
+## 三·五、 已上线地址（2026-11-06 实测通过）
+
+- **公开仓库**：https://github.com/yaping-pro/kiroween-specguard
+- **Live Dashboard（评委可直接点开）**：https://yaping-pro.github.io/kiroween-specguard/
+- **验证记录**：页面加载正常 → Radar 渲染 → 5 片分片生成 → 门限恢复出原文 → 1,000 次 PBT 压力测试 12.3ms 通过。
+- **仓库合规**：public + MIT（GitHub 已识别 spdx `MIT`）+ `.kiro/` 已跟踪且未被 gitignore。
+
 ## 四、 核心纪律与避坑防线
 
 1. **绝对不要向 `.gitignore` 添加 `.kiro`**：官方明确指出忽视 `.kiro` 会被取消参赛资格。
