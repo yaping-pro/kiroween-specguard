@@ -53,6 +53,7 @@ Because our Kiro steering document mandated PBT verification before implementati
 ## 4. Conclusion
 AI coding doesn't have to be reckless vibe coding. With AWS Kiro, specifications become executable contracts, hooks become real-time boundary guards, and property-based testing ensures mathematical certainty.
 
-Check out the full open-source project on GitHub: [SpecGuard Crew](https://github.com/yaping-pro/kiroween-specguard) and try the live interactive radar dashboard!
+Code: [github.com/yaping-pro/kiroween-specguard](https://github.com/yaping-pro/kiroween-specguard)  
+Live dashboard (click the PBT stress button): https://yaping-pro.github.io/kiroween-specguard/
 
 *This post was written as part of the Kiroween 2026 hackathon.*

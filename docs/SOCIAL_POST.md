@@ -13,5 +13,6 @@ My favorite feature is Kiro's Spec-driven engineering paired with Agent Hooks. I
 
 We built SpecGuard Crew for the Skeleton Crew category: 1 invariant engine powering both a Shamir cryptographic vault and a high-frequency trading matching engine. 
 
-Math doesn't lie. Check out the open-source repo: https://github.com/yaping-pro/kiroween-specguard 🎃👻
+Math doesn't lie. Try it live: https://yaping-pro.github.io/kiroween-specguard/
+Code: https://github.com/yaping-pro/kiroween-specguard 🎃👻
 ```
