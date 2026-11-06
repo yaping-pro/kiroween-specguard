@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["core-template/src/*"]
+    }
+  },
+  "include": [
+    "core-template/src/**/*",
+    "app-1-necromancer-vault/src/**/*",
+    "app-2-potions-exchange/src/**/*",
+    "serve.ts"
+  ]
+}

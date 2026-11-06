@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "specguard-fuzzer": {
+      "command": "bun",
+      "args": ["run", "core-template/src/mcp-server.ts"]
+    }
+  }
+}

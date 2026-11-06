@@ -1,0 +1,22 @@
+{
+  "name": "specguard-kiroween",
+  "version": "1.0.0",
+  "description": "SpecGuard Crew: Reusable Invariant State Engine with Property-Based Testing for Kiroween 2026 (Skeleton Crew Track)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "check": "tsc --noEmit",
+    "build": "bun run build:all",
+    "build:all": "bun build core-template/src/index.ts app-1-necromancer-vault/src/index.ts app-2-potions-exchange/src/index.ts --outdir dist",
+    "serve": "bun run serve.ts"
+  },
+  "dependencies": {
+    "fast-check": "^3.23.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}

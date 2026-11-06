@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "fast-check-pbt-regression",
+      "trigger": "PostFileSave",
+      "matcher": "(engine|shamir|orderbook|machine)\\.ts$",
+      "action": {
+        "type": "command",
+        "command": "bun test --timeout 5000"
+      }
+    }
+  ]
+}
