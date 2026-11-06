@@ -9,7 +9,8 @@
     "check": "tsc --noEmit",
     "build": "bun run build:all",
     "build:all": "bun build core-template/src/index.ts app-1-necromancer-vault/src/index.ts app-2-potions-exchange/src/index.ts --outdir dist",
-    "serve": "bun run serve.ts"
+    "serve": "bun run serve.ts",
+    "build:web": "bun build web/app.ts --outdir public --target browser --minify"
   },
   "dependencies": {
     "fast-check": "^3.23.2"
