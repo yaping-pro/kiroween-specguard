@@ -12,12 +12,15 @@ Modern AI engineering often suffers from "vibe-coding drift"—agents output cod
 
 ## 2. Comprehensive Kiro Features Breakdown
 
-### 2.1 Kiro Modalities & Comparison (IDE, CLI, Web, Crew)
-Throughout this build, we evaluated and integrated four Kiro surfaces:
-- **Kiro IDE**: Used for core architectural shaping and in-editor spec refactoring. The real-time inline spec diffing prevented code degradation.
-- **Kiro CLI (`kiro-cli`)**: Used in headless CI/CD automation pipelines and git save hooks. Running invariant checks via CLI headless mode provided sub-second regression feedback.
-- **Kiro Web**: Utilized for prompt exploration and lightweight spec drafting across remote environments without local dependencies.
-- **Kiro Crew**: Deployed autonomous parallel agents (`InvariantAuditor` and `RedTeamFuzzer`). Crew enabled simultaneous development of orthogonal applications (`app-1-necromancer-vault` and `app-2-potions-exchange`) while ensuring neither broke the shared core contracts in `core-template`.
+### 2.1 How Kiro consumes this repository
+This project is structured so that a Kiro agent can pick it up with zero onboarding: the agent reads `/.kiro` at repo root, and every architectural rule it needs is already encoded as machine-readable artifacts.
+
+- **Kiro IDE** — the primary surface. Opening the repo loads `.kiro/steering/*.md` (`inclusion: always`), so product/tech/structure constraints are in context before the first prompt.
+- **Kiro CLI (`kiro-cli`)** — the headless surface for scripted work: the same specs and hooks run without a GUI, which is how the invariant checks are wired to a save-triggered pipeline.
+- **Kiro Web** — the zero-install surface: `app.kiro.dev` runs sessions against the same account and consumes the same credits, useful for review without a local toolchain.
+- **Kiro Crew** — the parallel-agent surface: `.kiro/agents/invariant-auditor.json` defines a dedicated auditor agent that reviews state reducers for missing boundary invariants and proposes new properties.
+
+> Evidence in this repo: `.kiro/steering/` (3 files), `.kiro/specs/` (3 EARS spec sets), `.kiro/hooks/` (2 save triggers), `.kiro/agents/` (1 custom agent), `.kiro/settings/mcp.json` (1 MCP server).
 
 ### 2.2 Spec-Driven Development vs. Vibe Coding
 Instead of conversational vibe-coding, every component followed strict EARS (Easy Approach to Requirements Syntax) structure:
@@ -25,7 +28,7 @@ Instead of conversational vibe-coding, every component followed strict EARS (Eas
 2. `design.md`: Explicit mathematical invariants (e.g. Galois field polynomial bounds, balance conservation equations).
 3. `tasks.md`: Fine-grained task checklist linking code back to formal requirements.
 
-**Why this beat vibe-coding**: When implementing the Galois Field $GF(256)$ generator, simple prompting produced non-primitive polynomials (order 51) that broke Shamir reconstruction. Kiro's spec-driven reasoning caught the generator cycle requirement, switching to primitive polynomial `0x11d` before a single line of business logic was built.
+**Why this beats vibe-coding**: the specification forced the generator requirement to be written down before code existed. Implementing $GF(256)$ with polynomial `0x11b` produces an element of multiplicative order 51 instead of 255, which silently corrupts Lagrange interpolation; the spec's stated invariant (`2` must have order 255) rejects that choice, so the implementation uses primitive polynomial `0x11d`. The property test in `app-1-necromancer-vault/src/vault.test.ts` now fails loudly if anyone reintroduces a non-primitive generator.
 
 ### 2.3 Agent Hooks & Automation
 Configured two critical PostFileSave hooks in `.kiro/hooks/`:
