@@ -1,6 +1,6 @@
 # Devpost Submission Copy — Kiroween 2026 (Skeleton Crew)
 
-> Fill each field below into the Devpost "Enter a Submission" form. Placeholders marked `⟨…⟩` must be replaced with the published URL after upload.
+> All publication URLs are live (verified 2026-11-07). Paste each field into the Devpost "Enter a Submission" form.
 
 ## Project name
 SpecGuard Crew
@@ -14,9 +14,9 @@ A reusable invariant engine skeleton: specs become executable contracts, and pro
 ## Links
 - GitHub (public, MIT): https://github.com/yaping-pro/kiroween-specguard
 - Live app: https://yaping-pro.github.io/kiroween-specguard/
-- Demo video (YouTube, public): ⟨VIDEO_URL⟩
-- Blog post: ⟨BLOG_URL⟩
-- Social post: ⟨SOCIAL_URL⟩
+- Demo video (YouTube, public): https://youtu.be/ZEZo5MqwzkM
+- Blog post: https://dev.to/yapingma/beyond-vibe-coding-building-invariant-driven-agentic-systems-with-aws-kiro-2gcn
+- Social post: https://x.com/Andy_Xlab/status/2118829385017139319
 
 ## Description
 
@@ -45,7 +45,7 @@ TypeScript, Bun, `fast-check`, vanilla Web Components, GitHub Actions + Pages.
 See `docs/KIRO_USAGE.md` in the repository, and the summary above.
 
 ## Bonus prize fields
-- **Social Blitz**: ⟨SOCIAL_URL⟩
-- **Bonus Blog**: ⟨BLOG_URL⟩
+- **Social Blitz**: https://x.com/Andy_Xlab/status/2118829385017139319
+- **Bonus Blog**: https://dev.to/yapingma/beyond-vibe-coding-building-invariant-driven-agentic-systems-with-aws-kiro-2gcn
 - **Best Demo**: considered automatically
 - **Best Kiro Crew App**: not claimed (no Crew-only app submitted)
