@@ -7,12 +7,9 @@
 ### Tweet Draft (Copy & Paste to X):
 
 ```text
-#KiroweenHackathon26 Building with Kiro completely cured my fear of "vibe coding drift". 
+#KiroweenHackathon26 My favorite Kiro feature: a repo carries its own rules. .kiro/steering loads every session; hooks run property tests.
 
-My favorite feature is Kiro's Spec-driven engineering paired with Agent Hooks. Instead of hoping an LLM doesn't break edge cases, Kiro runs 1,000 automated property-based test (PBT) permutations upon every save hook. It actually caught a subtle Galois Field cycle bug before we ever committed code!
+SpecGuard Crew: one engine, two apps (Shamir vault + order book). A property test caught a GF(256) bug pre-commit.
 
-We built SpecGuard Crew for the Skeleton Crew category: 1 invariant engine powering both a Shamir cryptographic vault and a high-frequency trading matching engine. 
-
-Math doesn't lie. Try it live: https://yaping-pro.github.io/kiroween-specguard/
-Code: https://github.com/yaping-pro/kiroween-specguard 🎃👻
+https://yaping-pro.github.io/kiroween-specguard/
 ```
