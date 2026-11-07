@@ -103,6 +103,13 @@
 - **验证记录**：页面加载正常 → Radar 渲染 → 5 片分片生成 → 门限恢复出原文 → 1,000 次 PBT 压力测试 12.3ms 通过。
 - **仓库合规**：public + MIT（GitHub 已识别 spdx `MIT`）+ `.kiro/` 已跟踪且未被 gitignore。
 
+## 三·六、 已正式提交（2026-11-07）
+
+- **Devpost 项目页**：https://devpost.com/software/specguard-crew
+- **赛道**：Skeleton Crew｜**附加奖**：Social Blitz + Bonus Blog
+- **提交确认**：My projects 页面显示 `SUBMITTED`；项目页 HTTP 200 且可公开访问
+- 截止前仍可编辑：2026-12-04 17:00 EST（北京 12-05 06:00）
+
 ## 四、 核心纪律与避坑防线
 
 1. **绝对不要向 `.gitignore` 添加 `.kiro`**：官方明确指出忽视 `.kiro` 会被取消参赛资格。
